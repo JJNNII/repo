@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Tempo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Dashboard de Tempo</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Buscar cidade..." autocomplete="off">
+                <button id="search-btn" class="btn-search">🔍</button>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Current Weather Card -->
+            <section class="current-weather-card">
+                <div class="loading" id="loading">⏳ Carregando...</div>
+                <div class="weather-content" id="weather-content" style="display: none;">
+                    <div class="city-info">
+                        <h2 id="city-name">-</h2>
+                        <p id="date-time">-</p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <img id="weather-icon" src="" alt="Ícone do tempo" class="weather-icon">
+                        <div class="temp-display">
+                            <span id="temperature" class="temperature">-</span>
+                            <span class="unit">°C</span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-description">
+                        <p id="weather-desc">-</p>
+                        <p id="feels-like">Sensação: -°C</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Weather Details Grid -->
+            <section class="weather-details-grid" id="details-grid" style="display: none;">
+                <div class="detail-card">
+                    <h3>💧 Umidade</h3>
+                    <p id="humidity">-</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>💨 Velocidade do Vento</h3>
+                    <p id="wind-speed">-</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>🌡️ Pressão</h3>
+                    <p id="pressure">-</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>👁️ Visibilidade</h3>
+                    <p id="visibility">-</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>☁️ Nebulosidade</h3>
+                    <p id="cloudiness">-</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>🧭 Índice UV</h3>
+                    <p id="uv-index">-</p>
+                </div>
+            </section>
+            
+            <!-- 5-Day Forecast -->
+            <section class="forecast-section" id="forecast-section" style="display: none;">
+                <h3>📅 Previsão de 5 Dias</h3>
+                <div class="forecast-grid" id="forecast-grid"></div>
+            </section>
+            
+            <!-- Hourly Forecast -->
+            <section class="hourly-section" id="hourly-section" style="display: none;">
+                <h3>⏰ Previsão por Hora (Próximas 24h)</h3>
+                <div class="hourly-grid" id="hourly-grid"></div>
+            </section>
+            
+            <!-- Error Message -->
+            <div class="error-message" id="error-message" style="display: none;"></div>
+        </main>
+        
+        <footer>
+            <p>Dados fornecidos por <strong>OpenWeatherMap</strong> API</p>
+            <p>Insira uma chave de API válida em <code>config.js</code></p>
+        </footer>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
