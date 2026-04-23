@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Piadas Aleatórias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <h1>😂 Gerador de Piadas</h1>
+            <p class="subtitle">Prepare-se para rir!</p>
+            
+            <div class="joke-display">
+                <p id="joke-text">Clique no botão para gerar uma piada...</p>
+                <p id="joke-category" class="category"></p>
+            </div>
+            
+            <div class="button-group">
+                <button id="generate-btn" class="btn btn-primary">🎲 Gerar Piada</button>
+                <button id="copy-btn" class="btn btn-secondary">📋 Copiar</button>
+            </div>
+            
+            <div class="loading" id="loading">⏳ Carregando piada...</div>
+            
+            <div class="filters">
+                <label for="type-select">Tipo de Piada:</label>
+                <select id="type-select">
+                    <option value="any">Qualquer uma</option>
+                    <option value="single">Uma linha</option>
+                    <option value="twopart">Pergunta/Resposta</option>
+                </select>
+            </div>
+            
+            <div class="stats">
+                <p>Piadas geradas: <span id="counter">0</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
